@@ -42,7 +42,7 @@ namespace RomanCodingDecoding
         private string Decode(int num)
         {
             string roman = "";
-            string[] thousand = { "", "M", "MM", "MMM" };
+            string[] thousand = { "", "M", "MM", "MMM", "MV","V","VM","VMM","VMMM" };
             string[] hundred = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
             string[] ten = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
             string[] one = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };

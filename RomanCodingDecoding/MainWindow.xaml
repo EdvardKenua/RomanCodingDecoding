@@ -13,7 +13,7 @@
             <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
         <Grid Margin="0,0,2,0"/>
-        <Button x:Name="Calculate_Button" Grid.Column="2" Content="Расчитать" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Height="38" Width="72" Click="Calculate_Button_Click"/>
+        <Button x:Name="Calculate_Button" Grid.Column="2" Content="Расчитать" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Height="38" Width="72" Click="Calculate_Button_Click" Background="White"/>
         <RadioButton x:Name="RomanToNumRB" Grid.Column="1" Content="Из римских в обычные" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Width="179" Click="RomanToNumRB_Click"/>
         <RadioButton x:Name="NumToRomanRB" Grid.Column="1" Content="Из обычных в римские" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Width="179" Click="NumToRomanRB_Click"/>
         <Border x:Name="History" BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Center" Height="182" Margin="0,133,0,0" VerticalAlignment="Top" Width="179"/>
