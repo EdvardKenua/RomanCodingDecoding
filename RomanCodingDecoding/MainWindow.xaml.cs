@@ -35,9 +35,37 @@ namespace RomanCodingDecoding
             return choice;
         }
 
-        private int Encode(String Roman)
+        private int Encode(string RomanNum)
         {
-            return 0;
+
+        Dictionary<char, int> RomanToNum = new Dictionary<char, int>
+        {
+            { 'I', 1 },
+            { 'V', 5 },
+            { 'X', 10 },
+            { 'L', 50 },
+            { 'C', 100 },
+            { 'D', 500 },
+            { 'M', 1000 },
+        };
+            int result = 0;
+            char[] SplitedRomanNum = RomanNum.ToArray();
+            for (int i = 0; i < SplitedRomanNum.Length - 1; i++)
+            {
+                int current = RomanToNum[SplitedRomanNum[i]];
+                int nextNum = RomanToNum[SplitedRomanNum[i + 1]];
+                if (current >= nextNum)
+                {
+                    result += current;
+                }
+                else
+                {
+                    result -= current;
+                }
+            }
+            result += RomanToNum[SplitedRomanNum[SplitedRomanNum.Length - 1]];
+
+            return result;
         }
         private string Decode(int num)
         {
@@ -63,6 +91,8 @@ namespace RomanCodingDecoding
             switch (gottenChoice)
             {
                 case "Romans":
+                    string RomNum = (string)value;
+                    ResultBox.Text = Encode(RomNum).ToString();
                     break;
                 case "Numbers":
                     int NumToDec = int.Parse(value);
